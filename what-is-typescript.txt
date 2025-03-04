@@ -1,0 +1,4 @@
+TYPESCRIPT
+lepszy javascript, jest on tym samym tylko ma dodane rozszerzenia, ma typy
+typescript jest skompilowany - javascript jest celem kompilowania
+tsc index.ts
