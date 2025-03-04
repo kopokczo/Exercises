@@ -5,7 +5,7 @@ const button = document.getElementById("submitbtn") as HTMLInputElement;
 let randomNumber: number = Math.random() * (20 - 1) + 1;
 
 function checkNumber(): void{
-    if(randomNumber > Number(inputNumber.textContent)){
+    if(randomNumber > Number(inputNumber.value)){
         outputText.textContent = "podana liczba jest za mala";
     }else if(randomNumber < Number(inputNumber.textContent)){
         outputText.textContent = "podana liczba jest za duza";
