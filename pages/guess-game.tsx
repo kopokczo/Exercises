@@ -13,11 +13,11 @@ const GuessGame = () => {
     console.log(randomNumber);
 const checkNumber = () => {
 
-        if(randomNumber > Number(inputValue)){
+        if(randomNumber.current > Number(inputValue)){ //przez to ze randomnumber to juz nie liczba tylko ref musi byc .current
             setOutputText("podana liczba jest za mala");
-        }else if(randomNumber < Number(inputValue)){
+        }else if(randomNumber.current < Number(inputValue)){
             setOutputText("podana liczba jest za duza");
-        }else if(randomNumber == Number(inputValue)){
+        }else if(randomNumber.current == Number(inputValue)){
             setOutputText("zgadles");
         }
     }
