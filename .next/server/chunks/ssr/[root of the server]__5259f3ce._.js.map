@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 55, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/kodak/Desktop/praktyki/Exercises/pages/marcin.tsx"],"sourcesContent":["import React from \"react\";\r\n\r\nexport default function Marcin() {\r\n    return (\r\n      <div>\r\n        <h1>Stronka he</h1>\r\n        <a href='https://google.com'>\r\n            Google\r\n        </a>\r\n      </div>\r\n    );\r\n  }\r\n  "],"names":[],"mappings":";;;;;AAEe,SAAS;IACpB,qBACE,qKAAC;;0BACC,qKAAC;0BAAG;;;;;;0BACJ,qKAAC;gBAAE,MAAK;0BAAqB;;;;;;;;;;;;AAKnC","debugId":null}},
-    {"offset": {"line": 85, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
