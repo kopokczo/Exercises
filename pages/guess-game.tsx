@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react"
-
-const randomNumber = Math.floor(Math.random() * (20 - 1) + 1);
+let randomNumber = Math.floor(Math.random() * (20 - 1) + 1);
+const resetNumber = () => {
+    let number = Math.floor(Math.random() * (20 - 1) + 1)
+    randomNumber = number;
+}
 const GuessGame = () => {
     const [outputText, setOutputText] = useState<null|string>(null);
     const [inputValue, setInputValue] = useState<null|string>(null);
@@ -23,6 +26,7 @@ const checkNumber = () => {
     <h1>zgadnij liczbe (1-20)</h1>
     <input type="number" onChange={(event)=>setInputValue(event.target.value)}></input>
     <button type="button" onClick={checkNumber}>submit</button>
+    <button type="button" onClick={resetNumber}>reset</button>
     <p>{outputText}</p>
     </div>
         )
