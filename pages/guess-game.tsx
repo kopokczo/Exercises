@@ -5,10 +5,7 @@ const GuessGame = () => {
     const [inputValue, setInputValue] = useState<null|string>(null);
     const button = useRef(null);
     const randomNumber = useRef(Math.floor(Math.random() * 20) + 1);
-    const resetNumber = () => {
-        randomNumber.current = Math.floor(Math.random() * (20 - 1) + 1);
-        console.log(randomNumber);
-    }
+    
     console.log(inputValue);
     console.log(randomNumber);
 const checkNumber = () => {
@@ -26,7 +23,7 @@ const checkNumber = () => {
     <h1>zgadnij liczbe (1-20)</h1>
     <input type="number" onChange={(event)=>setInputValue(event.target.value)}></input>
     <button type="button" onClick={checkNumber}>submit</button>
-    <button type="button" onClick={resetNumber}>reset</button>
+    <button type="button" onClick={() => {randomNumber.current = Math.floor(Math.random() * (20 - 1) + 1);}}>reset</button>
     <p>{outputText}</p>
     </div>
         )
