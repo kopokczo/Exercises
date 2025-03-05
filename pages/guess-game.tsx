@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react"
 
+const randomNumber = Math.floor(Math.random() * (20 - 1) + 1);
 const GuessGame = () => {
     const [outputText, setOutputText] = useState<null|string>(null);
     const [inputValue, setInputValue] = useState<null|string>(null);
     const button = useRef(null);
     
     console.log(inputValue);
-    const randomNumber = Math.floor(Math.random() * (20 - 1) + 1);
     console.log(randomNumber);
 const checkNumber = () => {
 
@@ -29,6 +29,5 @@ const checkNumber = () => {
 }
 export default GuessGame;
 /*
-JAK DZIALA USESTATE ,USEREF
-DLACZEGO JAK DASZ SUBMIT TO LOSUJE NOWA LICZBE
+DLACZEGO JAK DASZ SUBMIT TO LOSUJE NOWA LICZBE //// losowanie liczb powinno sie odpywac poza renderowaną przez useState funkcją
 */ 
