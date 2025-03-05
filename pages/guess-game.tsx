@@ -4,11 +4,9 @@ const GuessGame = () => {
     const [outputText, setOutputText] = useState<null|string>(null);
     const [inputValue, setInputValue] = useState<null|string>(null);
     const button = useRef(null);
-    let randomNumber = useRef(0);
-    randomNumber.current = Math.floor(Math.random() * (20 - 1) + 1);
+    const randomNumber = useRef(Math.floor(Math.random() * 20) + 1);
     const resetNumber = () => {
-        let number = Math.floor(Math.random() * (20 - 1) + 1)
-        randomNumber = number;
+        randomNumber.current = Math.floor(Math.random() * (20 - 1) + 1);
         console.log(randomNumber);
     }
     console.log(inputValue);
