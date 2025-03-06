@@ -5,7 +5,6 @@ const GuessGame = () => {
     const [inputValue, setInputValue] = useState<null|string>(null);
     const button = useRef(null);
     const randomNumber = useRef(Math.floor(Math.random() * 20) + 1);
-    
     console.log(inputValue);
     console.log(randomNumber);
 const checkNumber = () => {
