@@ -4,6 +4,7 @@ const TodoApp = () => {
   const [tasks, setTasks] = useState<string[]>([]);
   const [input, setInput] = useState("");
   const [inputEdit, setInputEdit] = useState("");
+  const [editIndex, setEditIndex] = useState<number>();
     
   const addTask = () => {
     if (input.trim()) {
