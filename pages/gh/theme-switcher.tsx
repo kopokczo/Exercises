@@ -5,8 +5,8 @@ const ThemeContext = createContext({
   setTheme: (theme: string) => {},
 });
 const LangContext = createContext({
-  theme: "pl",
-  setTheme: (lang: string) => {},
+  lang: "pl",
+  setLang: (lang: string) => {},
 });
 
 const ThemeProvider = ({ children }) => {
@@ -15,11 +15,10 @@ const ThemeProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      {children}
-    </ThemeContext.Provider>
-    <LangContext.Provider value={{lang, setLang}}>
+      <LangContext.Provider value={{ lang, setLang }}>
         {children}
-    </LangContext.Provider>
+      </LangContext.Provider>
+    </ThemeContext.Provider>
   );
 };
 
@@ -49,6 +48,7 @@ const LangSwitcher = () => {
 const App = () => (
   <ThemeProvider>
     <ThemeSwitcher />
+    <LangSwitcher />
   </ThemeProvider>
 );
 
